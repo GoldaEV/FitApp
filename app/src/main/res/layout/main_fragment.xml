@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="120dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="18dp" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/style_title"
+        android:layout_marginTop="60dp"
+        android:text="@string/main_fragment_tv_title"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/title_calories_goal_title"
+        style="@style/style_item_title"
+        android:layout_marginTop="50dp"
+        android:text="@string/main_fragment_title_calories_goal_title"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/title_eating_title"
+        style="@style/style_item_title"
+        android:text="@string/main_fragment_title_eating_title"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/title_calories_goal_title" />
+
+    <TextView
+        android:id="@+id/title_burn_title"
+        style="@style/style_item_title"
+        android:text="@string/main_fragment_title_burn_title"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/title_eating_title" />
+
+    <TextView
+        android:id="@+id/title_total_title"
+        style="@style/style_item_title"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/main_fragment_title_total_title"
+        app:layout_constraintBaseline_toBaselineOf="@+id/title_calories_goal_title"
+        app:layout_constraintEnd_toEndOf="@id/guideline3" />
+
+    <com.golda.fitapp.ui.views.AnimatedTextView
+        android:id="@+id/title_calories_goal_value"
+        style="@style/style_item_value"
+        android:layout_marginTop="50dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@id/title_calories_goal_title"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+    <TextView
+        android:id="@+id/title_calories_goal_value_t"
+        style="@style/style_item_value"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/main_fragment_default_value"
+        app:layout_constraintBaseline_toBaselineOf="@id/title_calories_goal_title"
+        app:layout_constraintStart_toEndOf="@id/title_calories_goal_value" />
+
+    <com.golda.fitapp.ui.views.AnimatedTextView
+        android:id="@+id/title_eating_value"
+        style="@style/style_item_value"
+        android:layout_marginTop="50dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@id/title_eating_title"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+    <TextView
+        android:id="@+id/title_eating_value_t"
+        style="@style/style_item_value"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/main_fragment_default_value"
+        app:layout_constraintBaseline_toBaselineOf="@id/title_eating_title"
+        app:layout_constraintStart_toEndOf="@id/title_eating_value" />
+
+    <com.golda.fitapp.ui.views.AnimatedTextView
+        android:id="@+id/title_burn_value"
+        style="@style/style_item_value"
+        android:layout_marginTop="50dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@id/title_burn_title"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+    <TextView
+        android:id="@+id/title_burn_value_t"
+        style="@style/style_item_value"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/main_fragment_default_value"
+        app:layout_constraintBaseline_toBaselineOf="@id/title_burn_title"
+        app:layout_constraintStart_toEndOf="@id/title_burn_value" />
+
+    <com.golda.fitapp.ui.views.AnimatedTextView
+        android:id="@+id/title_total_value"
+        style="@style/style_item_value"
+        android:layout_marginTop="0dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="0"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/title_total_title" />
+
+    <TextView
+        android:id="@+id/title_total_value2"
+        style="@style/style_item_value"
+        android:layout_margin="0dp"
+        android:layout_marginTop="0dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="kalc"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/title_total_value" />
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="55dp"
+        android:background="@color/line_color"
+        app:layout_constraintBottom_toTopOf="@id/card_breakfast" />
+
+    <com.broooapps.graphview.CurveGraphView
+        android:id="@+id/cgv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/view_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_burn_title" />
+
+    <include
+        android:id="@+id/card_breakfast"
+        layout="@layout/layout_card"
+        android:layout_width="88dp"
+        android:layout_height="166dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline" />
+
+    <include
+        android:id="@+id/card_lunch"
+        layout="@layout/layout_card"
+        android:layout_width="88dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintStart_toEndOf="@id/card_breakfast" />
+
+    <include
+        android:id="@+id/card_dinner"
+        layout="@layout/layout_card"
+        android:layout_width="88dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintStart_toEndOf="@id/card_lunch" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="60dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
